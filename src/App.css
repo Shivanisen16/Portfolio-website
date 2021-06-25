@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
 
 :root {
   --primary-white: #fff;
   --primary-yellow: #ffc107;
-  --primary-dark: #0dcaf0;
+  --primary-blue: #0d6efd;
 }
 
 body{
-  font-family:'Roboto Condensed' sans-serif;
+  font-family:'Roboto Condensed' ,sans-serif;
 }
 /*navbar links */
 nav a.nav-link{
@@ -29,17 +31,18 @@ nav ul li{
 }
 
 .navbar-brand {
-  max-width:17.25rem;
-  padding: 0 !important;
-  height: 3rem !important;
+  font-family: "Georgia";
+  font-size: 1.4rem !important;
+  color: var(--primary-white) !important;
+  font-weight: 100;
 }
 
 .navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
-  border-bottom: 0.1880rem solid var(--primary-yellow);
+  border-bottom: 0.1880rem solid var(--primary-blue);
 }
 
 .navbar-nav > li > a:hover{
-  border-bottom: 0.1880rem solid var(--primary-yellow);
+  border-bottom: 0.1880rem solid var(--primary-blue);
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -47,5 +50,119 @@ nav ul li{
   padding-right: var(--bs-gutter-x,.75rem);
   padding-left: var(--bs-gutter-x,.75rem);
   margin-right: 0 !important;
-  margin-left: auto;
+  margin-left: auto !important;
+}
+
+/************ header*********/
+
+.header-wrapper {
+  position: relative;
+  background: url(backgroundhome.jpg) no-repeat;
+  background-size: cover;
+  background-position : center;
+  height : 100vh;
+}
+
+.main-info{
+  display:flex;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+  /*font-family: 'Fjalla One', sans-serif;*/
+  font-family: 'Benne', serif;
+}
+
+.main-info h1{
+  font-size:60px;
+  color: var(--primary-white) ;
+}
+
+.typed-text{
+  font-size: 2.3rem;
+  color: var(--primary-white);
+}
+
+@media(max-width:768px){
+  .main-info h1{
+    font-size:1.3 rem !important;
+  }
+  .typed-text{
+    font-size:1.1 rem !important;
+  }
+}
+
+/********************** about******************************/
+
+.about-me h1{
+  text-align:center;
+  margin:10vh;
+}
+
+.about-img{
+
+  height:30vh;
+  width:27.5vh;
+  border-radius:50% ;
+  display: flex;
+  float:left;
+  justify-content: space-between;
+  overflow:hidden;
+  margin-left:10%;
+}
+
+.about-text{
+  max-width:700px;
+  width:100%;
+   display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size:20px;
+  margin-left:40%;
+  margin-top:10%;
+  font-family: Cambria,  serif;
+}
+
+
+.about-me-container {
+  max-width: 1000px;
+  width:100%;
+  margin-top: 40px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width:768px){
+  .about-me h1{
+    font-size:25px;
+  }
+
+  /*.about-me-container{
+    flex-flow: column;
+    margin:0 auto;
+  } */
+
+  .about-me-text{
+    text-align:center;
+    margin-top: 15px;
+    margin-left:0 !important;
+  }
+
+  /*.abt{
+    font-size:25px;
+  }*/
+
+  .about-img{
+    align-content: center;
+    border-radius:50% ;
+    margin-left:50%;
+    margin-right:50%;
+  }
 }
