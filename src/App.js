@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
-import Work from "./components/Work";
+import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Navbar/>
       <Header/>
       <About/>
-      <Work/>
+      <Projects/>
       <Footer/>
     </Router>
     </>

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {HashLink as Link} from "react-router-hash-link";
 
 function Navbar() {
     return (
@@ -15,16 +16,17 @@ function Navbar() {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ms-auto">
       <li className="nav-item active">
-        <a className="nav-link" href="#">Home</a>
+        
+        <Link smooth className="nav-link" aria-current="page" to="#home">Home</Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href=".about-me">About</a>
+      <Link smooth className="nav-link" to="#about">About</Link>
       </li>
       <li className="nav-item active">
-        <a className="nav-link" href="#">Blog</a>
+      <Link smooth className="nav-link" to="#work">Work</Link>
       </li>
       <li className="nav-item active">
-        <a className="nav-link" href="#">Contact</a>
+      <Link smooth className="nav-link" to="#contact">Contact</Link>
       </li>
       
       
